@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>JavaScript Calculator</title>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.0/css/bootstrap.min.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.16.0/umd/popper.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.0/js/bootstrap.min.js"></script>
+</head>
+<style >
+#demo1{
+    color: darkred;
+}    
+ </style>
+<body class="bg-warning">
+    <div class="container">
+        <div class="row">
+            <div class="col-md-6 mt-5 mx-auto d-block bg-light p-4 rounded" style="height: 350px;">
+                <h2 class="text-center p-3">Lottery Draw</h2>
+                <button class="btn btn-primary" onclick="generateRandomNumber()"data-toggle="modal" data-target="#myModal" >Click Me</button>
+
+  <div class="modal" id="myModal">
+    <div class="modal-dialog">
+      <div class="modal-content">
+        <div class="modal-header">
+          <h4 class="modal-title">lottery winner</h4>
+          <button type="button" class="close" data-dismiss="modal">&times;</button>
+        </div>
+        <div class="modal-body">
+          <p id="demo"></p>
+        </div>
+        <div class="modal-footer">
+          <button type="button" class="btn btn-danger" data-dismiss="modal">Close</button>
+        </div>
+        </div>
+    </div>
+  </div>
+                <p id="demo1" >winner is:</p>
+            </div>
+        </div>
+    </div>
+
+    <script>
+        var a =[100,112,113,114,115,116,117,118,119]; 
+
+       function generateRandomNumber() {
+            var randomNumber = Math.floor(Math.random() * 10) ;
+            document.getElementById("demo1").innerHTML = "winner is: " +a[randomNumber] ;
+            document.getElementById("demo").innerHTML = "winner: " +a[randomNumber] ;
+            console.log("winner is: " + a[randomNumber]);
+
+        }
+    </script>
+</body>
+</html>
